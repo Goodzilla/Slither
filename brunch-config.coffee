@@ -4,8 +4,7 @@ exports.config =
     javascripts:
       joinTo: {
         'js/app.js': /app[\\/]vendor[\\/]/,
-        'js/vendor.js': /app[\\/]vendor[\\/]libs[\\/]/,
-        'js/modules.js': /app[\\/]modules[\\/]/,
+        'js/vendor.js': /app[\\/]vendor[\\/]libs[\\/]/
       },
     stylesheets:
       joinTo: 'app.css'
