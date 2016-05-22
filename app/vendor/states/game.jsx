@@ -55,10 +55,11 @@ PhaserBp.Game.prototype = {
 		this.snakeHead.rotation = newRotation;
 
 		// LIMIT SNAKE ROTATION
-		this.targetAngle = this.math.radToDeg(newRotation);
+		this.targetAngle = this.math.roundTo(this.math.radToDeg(newRotation), 0);
 
 		if (this.currentAngle - this.targetAngle !== 0) {
-			if (Math.abs(this.currentAngle - this.targetAngle) < 180) {
+			if (Math.abs(this.currentAngle - this.targetAngle) < this.maxTurningAngle) this.currentAngle = this.targetAngle;
+			else if (Math.abs(this.currentAngle - this.targetAngle) < 180) {
 				// ROTATE DIRECTLY TOWARDS THE TARGET
 				if (this.currentAngle < this.targetAngle) this.currentAngle += this.maxTurningAngle;
 				else this.currentAngle -= this.maxTurningAngle;
