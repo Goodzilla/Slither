@@ -1,12 +1,13 @@
 // Preload State
 PhaserBp.Preload = function(game) {
-  console.log("Load State Initiated");
+	console.log("Load State Initiated");
 };
 
 PhaserBp.Preload.prototype = {
-
 	preload: function () {
-        this.load.image('renderTest', 'images/megaman.png');
+        this.load.image('background', 'images/debug-grid-1920x1920.png');
+		this.load.image('snake-head', 'images/snake-head.png');
+		this.load.image('snake-body', 'images/snake-body.png');
 	},
 
 	create: function () {
