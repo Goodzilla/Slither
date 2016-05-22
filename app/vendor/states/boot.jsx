@@ -12,6 +12,7 @@ PhaserBp.Boot.prototype = {
         this.scale.pageAlignHorizontally = true;
         this.scale.pageAlignVertically = true;
         this.stage.forcePortrait = false;
+		this.stage.disableVisibilityChange = true;
         this.input.addPointer();
 
         this.state.start('Preload');
