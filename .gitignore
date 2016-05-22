@@ -17,6 +17,12 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Dependency directories
+node_modules
+
+# Build files
+public
+
 # =========================
 # Operating System Files
 # =========================
